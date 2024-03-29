@@ -5,7 +5,7 @@ const images = [
   },
   {
     url: 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
+    alt: 'Orange and White Koi Fish Near Yellow Koi Fish'
   },
   {
     url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
@@ -17,8 +17,8 @@ const gallery = document.querySelector('.gallery')
 const marcup = images.map(image => {
   return `
     <li>
-      <img src="${image.url}" alt="${image.alt}">
+      <img src="${image.url}" alt="${image.alt}" width="360" height="300">
     </li>
   `
-})
+}).join('')
 gallery.insertAdjacentHTML('beforeend', marcup)
